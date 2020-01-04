@@ -9,6 +9,10 @@ public class UserInfo {
 
     private String addr;
 
+    private String createtime;
+
+    private String newtime;
+
     public String getId() {
         return id;
     }
@@ -39,5 +43,21 @@ public class UserInfo {
 
     public void setAddr(String addr) {
         this.addr = addr;
+    }
+
+    public String getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(String createtime) {
+        this.createtime = createtime;
+    }
+
+    public String getNewtime() {
+        return newtime;
+    }
+
+    public void setNewtime(String newtime) {
+        this.newtime = newtime;
     }
 }
