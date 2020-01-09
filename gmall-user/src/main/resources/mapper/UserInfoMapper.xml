@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tangtang.gmall.user.mapper.UserInfoMapper">
-    <select id="selectAllUserInfo"  resultType="com.tangtang.gmall.user.bean.UserInfo">
+    <select id="selectAllUserInfo"  resultType="com.tangtang.gmall.bean.UserInfo">
         select * from user_info
     </select>
 </mapper>

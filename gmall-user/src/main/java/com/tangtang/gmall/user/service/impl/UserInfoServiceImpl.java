@@ -1,8 +1,8 @@
 package com.tangtang.gmall.user.service.impl;
 
-import com.tangtang.gmall.user.bean.UserInfo;
+import com.tangtang.gmall.bean.UserInfo;
+import com.tangtang.gmall.service.UserService;
 import com.tangtang.gmall.user.mapper.UserInfoMapper;
-import com.tangtang.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +18,7 @@ public class UserInfoServiceImpl implements UserService {
     public List<UserInfo> userInfoList() {
         //List<UserInfo> userInfoList = userInfoMapper.selectAllUserInfo();
         //使用通用mapper
+        //List<UserInfo> userInfoList = userInfoMapper.selectAll();
         List<UserInfo> userInfoList = userInfoMapper.selectAll();
         return userInfoList;
     }

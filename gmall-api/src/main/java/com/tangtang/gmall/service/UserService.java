@@ -1,6 +1,6 @@
-package com.tangtang.gmall.user.service;
+package com.tangtang.gmall.service;
 
-import com.tangtang.gmall.user.bean.UserInfo;
+import com.tangtang.gmall.bean.UserInfo;
 
 import java.util.List;
 

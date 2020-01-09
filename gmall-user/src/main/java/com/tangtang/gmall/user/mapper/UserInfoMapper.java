@@ -1,6 +1,6 @@
 package com.tangtang.gmall.user.mapper;
 
-import com.tangtang.gmall.user.bean.UserInfo;
+import com.tangtang.gmall.bean.UserInfo;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

@@ -1,7 +1,8 @@
 package com.tangtang.gmall.user.controller;
 
-import com.tangtang.gmall.user.bean.UserInfo;
-import com.tangtang.gmall.user.service.UserService;
+import com.tangtang.gmall.bean.UserInfo;
+import com.tangtang.gmall.service.UserService;
+import com.tangtang.gmall.bean.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

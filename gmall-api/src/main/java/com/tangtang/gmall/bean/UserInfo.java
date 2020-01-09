@@ -1,4 +1,4 @@
-package com.tangtang.gmall.user.bean;
+package com.tangtang.gmall.bean;
 
 public class UserInfo {
     private String id;
