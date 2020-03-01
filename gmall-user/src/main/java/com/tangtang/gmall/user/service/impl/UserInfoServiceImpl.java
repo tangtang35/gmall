@@ -1,10 +1,10 @@
 package com.tangtang.gmall.user.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.tangtang.gmall.bean.UserInfo;
 import com.tangtang.gmall.service.UserService;
 import com.tangtang.gmall.user.mapper.UserInfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
