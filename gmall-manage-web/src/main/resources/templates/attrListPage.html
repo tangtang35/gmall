@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商品平台属性</title>
+</head>
+<body>
+    <table class="easyui-datagrid"
+           data-options="toolbar: '#tb',fitColumns:true,singleSelect:true">
+        <thead>
+        <tr>
+            <th data-options="field:'id',width:100">属性编号</th>
+            <th data-options="field:'attrName',width:100">属性名称</th>
+        </tr>
+        </thead>
+    </table>
+
+    <br/>
+
+    <div id="tb">
+        <br/>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">添加</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">修改</a>
+        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</a>
+        <br/>
+        <div>
+            一级分类：<select data-options="valueField:'id',textField:'name',url:'getCatalog1'"
+                         class="easyui-combobox" name="state"  style="width:100px;"></select>
+            二级分类：<select class="easyui-combobox" name="state"  style="width:100px;"></select>
+            三级分类：<select class="easyui-combobox" name="state"  style="width:100px;"></select>
+            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px">Search</a>
+        </div>
+        <br/>
+    </div>
+
+</body>
+</html>
