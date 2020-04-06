@@ -5,7 +5,7 @@
     <title>商品平台属性</title>
 </head>
 <body>
-    <table class="easyui-datagrid"
+    <table id="attributes" class="easyui-datagrid"
            data-options="toolbar: '#tb',fitColumns:true,singleSelect:true">
         <thead>
         <tr>
@@ -24,14 +24,29 @@
         <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</a>
         <br/>
         <div>
-            一级分类：<select data-options="valueField:'id',textField:'name',url:'getCatalog1'"
+            一级分类：<select data-options="onSelect: function(param){
+		                                    var url = 'getCatalog2?catalog1Id='+param.id;
+                                           $('#ctg2ForAttrList').combobox('reload', url);
+	                                    }
+            ,valueField:'id',textField:'name',url:'getCatalog1'"
                          class="easyui-combobox" name="state"  style="width:100px;"></select>
-            二级分类：<select class="easyui-combobox" name="state"  style="width:100px;"></select>
-            三级分类：<select class="easyui-combobox" name="state"  style="width:100px;"></select>
-            <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px">Search</a>
+            二级分类：<select data-options="onSelect: function(param){
+		                                    var url = 'getCatalog3?catalog2Id='+param.id;
+                                           $('#ctg3ForAttrList').combobox('reload', url);
+	                                    }
+            ,valueField:'id',textField:'name'" name="ctg2ForAttrList" id="ctg2ForAttrList" class="easyui-combobox"   style="width:100px;"></select>
+            三级分类：<select data-options="valueField:'id',textField:'name'" name="ctg3ForAttrList" id="ctg3ForAttrList" class="easyui-combobox"  style="width:100px;"></select>
+            <a href="javascript:getAttrList();" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px">Search</a>
         </div>
         <br/>
     </div>
+
+    <script language="JavaScript">
+        function getAttrList() {
+            var catalog3Id = $("#ctg3ForAttrList").combobox("getValue");
+            $("#attributes").datagrid({url:"getAttrListByCtg3?catalog3Id="+ catalog3Id});
+        }
+    </script>
 
 </body>
 </html>
